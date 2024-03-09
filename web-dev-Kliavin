@@ -7,6 +7,14 @@ body {
   background-color: linen;
 }
 
+nav {
+  float: centre;
+  width: 100%;
+  height: 20px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 10px;
+}
+
 div {
   background-color: green;
   opacity: 0.3;
@@ -35,11 +43,17 @@ dl {
 </style>
 </head>
 <h1 id="myHeader">Practical work 1</h1>
-<nav>
 <section>
 <article>
-  <p>Answers are below</p>
-  <a href="#ans1">Answer 1</a> <a href="#ans2">Answer 2</a> <a href="#ans3">Answer 3</a> <a href="#ans4">Answer 4</a> <a href="#ans5">Answer 5</a> <a href="#ans6">Answer 6</a>
+  <p>Answers are on the left</p>
+  <nav>
+  <a href="#ans1">Answer 1</a>
+  <a href="#ans2">Answer 2</a>
+  <a href="#ans3">Answer 3</a>
+  <a href="#ans4">Answer 4</a>
+  <a href="#ans5">Answer 5</a>
+  <a href="#ans6">Answer 6</a>
+  </nav>
   </header>
   </article>
   </section>
@@ -68,10 +82,12 @@ dl {
   <dt id="question">What is the minimal HTML page code?</dt>
   <ul style="list-style-type:none;">
 <li id="ans3">Minimal HTML page - minimum that an HTML document SHOULD now contain, assuming it has CSS and JavaScript linked to it. Example is here (WARNING: It's not a real video. This was made for task)</li>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_1YrtzUSX4o?si=wYNuDJKC3YEuIk67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<video width="320" height="240" controls>
+  <source src="PoiTeaser.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 <audio controls>
-  <source src="horse.ogg" type="audio/ogg">
-  <source src="horse.mp3" type="audio/mpeg">
+  <source src="1222.mp3" type="audio/mpeg">
   Your browser does not support the audio tag.
 </audio>
 </ul>
