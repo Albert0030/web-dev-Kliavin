@@ -1,121 +1,115 @@
 <!DOCTYPE html>
-<header>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  background-color: linen;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Report</title>
+	<style>
+  /* Border Styles */
+  .block1 {
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px;
+  }
 
-nav {
-  float: centre;
-  width: 100%;
-  height: 20px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 10px;
-}
+  .block2 {
+    border: 5px dotted blue;
+    padding: 15px;
+    margin: 15px;
+  }
 
-div {
-  background-color: green;
-  opacity: 0.3;
-}
-dl {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-}
+  .inline1 {
+    border: 3px double green;
+    padding: 5px;
+    margin: 5px;
+  }
 
-#myHeader {
-  background-color: green;
-  color: red;
-  padding: 40px;
-  text-align: center;
-} 
+  .inline2 {
+    border: 4px dashed purple;
+    padding: 7px;
+    margin: 7px;
+  }
 
-#question {
-  background-color: tomato;
-  color: white;
-  padding: 5px;
-  text-align: center;
-}
+  /* Background Styles */
+  .bg-hex {
+    background-color: #ffcc00;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .bg-gradient {
+    background: linear-gradient(to right, #ff9966, #ff99cc);
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .bg-image {
+    background-image: url('background.jpg');
+    background-size: cover;
+    padding: 20px;
+    margin: 20px;
+  }
+  .example1 {
+            background-color: #f1c40f;
+            height: 100px;
+        }
+        
+        .example2 {
+            background: linear-gradient(to right, #ff0000, #0000ff);
+            height: 100px;
+        }
+        
+        .example3 {
+            background: repeating-linear-gradient(45deg, #ffcc00, #ffcc00 10px, #ff6600 10px, #ff6600 20px);
+            height: 100px;
+        }
+        
+        .example4 {
+            background-image: url('background.jpg');
+            height: 100px;
+        }
+        
+        .example5 {
+            background-image: url('fortask.png'), url('background.jpg');
+            background-blend-mode: multiply;
+            height: 100px;
+        }
+        
+        .example6 {
+            background-color: rgba(255, 0, 0, 0.5);
+            height: 100px;
+        }
 </style>
 </head>
-<h1 id="myHeader">Practical work 1</h1>
-<section>
-<article>
-  <p>Answers are here</p>
-  <nav>
-  <a href="#ans1">Answer 1</a>
-  <a href="#ans2">Answer 2</a>
-  <a href="#ans3">Answer 3</a>
-  <a href="#ans4">Answer 4</a>
-  <a href="#ans5">Answer 5</a>
-  <a href="#ans6">Answer 6</a>
-  </nav>
-  </header>
-  </article>
-  </section>
-  <section>
-  <dl>
-  <dt id="question">When HTML5 has become a standard? What were the main reasons for developing new standard?</dt>
-  <ul style="list-style-type:none;">
-  <li id="ans1">HTML5 was first released in a public-facing form on 22 January 2008, with a major update and "W3C Recommendation" status in October 2014. 
-  Its goals were to improve the language with support for the latest multimedia and other new features; to keep the language both easily readable by humans and consistently understood by computers and devices such as web browsers, parsers, etc., without XHTML's rigidity; and to remain backward-compatible with older software. 
-  HTML5 is intended to subsume not only HTML 4 but also XHTML1 and even the DOM Level 2 HTML itself.</li>
-  </ul>
-  </section>
-  <section>
-  <dt id="question">What is a difference between W3C HTML5 and WHATWG HTML Living Standard?</dt>
-  <ul style="list-style-type:none;">
-  <li id="ans2">W3C and WHATWG work together on HTML and DOM, in the WHATWG repositories, to produce a Living Standard and Recommendation/Review Draft-snapshots</li>
-  <ul>
-<li>WHATWG maintains the HTML and DOM Living Standards</li>
-<li>W3C facilitates community work directly in the WHATWG repositories (bridging communities, developing use cases, filing issues, writing tests, mediating issue resolution)</li>
-<li>W3C stops independent publishing of a designated list of specifications related to HTML and DOM and instead will work to take WHATWG Review Drafts to W3C Recommendations</li>
-</ul>
-</li>
-</ul>
-</section>
-  <section>
-  <dt id="question">What is the minimal HTML page code?</dt>
-  <ul style="list-style-type:none;">
-<li id="ans3">Minimal HTML page - minimum that an HTML document SHOULD now contain, assuming it has CSS and JavaScript linked to it. Example is here (WARNING: It's not a real video. This was made for task)</li>
-<video width="320" height="240" controls>
-  <source src="PoiTeaser.mp4" type="video/mp4">
-</video>
-<audio controls>
-  <source src="1222.mp3" type="audio/mpeg">
-</audio>
-</ul>
-</section>
-  <section>
-  <dt id="question">Comment on semantic and presentational markup. Why presentational markup is considered deprecated now?</dt>
-<ul style="list-style-type:none;">
-<li id="ans4">Semantic HTML is the subset of HTML that describes the content and structure of a document, whereas presentational HTML is the subset of HTML used to determine the appearance of the document. While this definition is straightforward and unambiguous, in practice it is often difficult to point out the exact range of these sets. Fortunately for us as developers, semantic markup does a lot more for us than simply describe it’s content and use. It can also simultaneously describe it’s presentation as well, being able to do both when and where possible has many massive benefits (The markup is easy to read and understand. Assists with scalability of projects if and when up-scaling a project. The tags not only describe their function and the content but also their placement…)</li>
-</ul>
-</section>
-  <section>
-  <dt id="question">How you can check browser support for particular tag or attribute?</dt>
-<ul style="list-style-type:none;">
-<li id="ans5">The form attribute on input is a special case. It was used before the HTML5 feature, to reference the parent form, but now it's used as an attribute as well, so you will have false positives on IE.
-There is a checking function but it involves interaction with DOM which will probably affect performance.</li>
-</ul>
-</section>
-  <section>
-  <dt id="question">What are the audio and video formats, officially supported by HTML standard? What happens if you use other format?</dt>
-<ul style="list-style-type:none;">
-<li id="ans6">To use media in your next HTML5 application, you need to know what formats are supported. HTML5 supports AAC, MP3 and Ogg Vorbis for audio and Ogg Theora, WebM and MPEG-4 for video. Even though HTML5 supports these media formats, however, not every browser supports every format and it won’t be played. Figure 2 shows current browsers and the media formats they support.</li>
-</ul>
-</section>
-</dl>    
-  <footer>
-  <p>This was not hard, as I thought. Surprisingly, I have a pretty good knowledge retention from 11th grade. Of course there were some questions regarding writing id, but it was pretty easy. Except that I still have questions about adding a video and music, so there will probably be an error there.</p>
-  <img src="https://media.licdn.com/dms/image/C4E0BAQFF4VQPXpNFZA/company-logo_200_200/0/1631375998899/sb_bsu_logo?e=2147483647&v=beta&t=A1ZtJVzN7IsH7bR4CxC8A8EVXZwn-DhSJyI_bui35ic" alt="SB BSU Image">
-  <figure>
-</footer>  
-</article>
-<title>HTML and so on</title>
+<body>
+    <main>
+	 <article>
+            <h1 class="block1">Web Development Report</h1>
+            <p class="inline1">In this report, we will explore various aspects of web development.</p>
+
+            <h2 class="block2">Opening Developer's Console</h2>
+            <p class="inline2">To open the developer's console in Mozilla Firefox, you can press <strong>F12</strong> or right-click on the webpage and select "Inspect". In Safari, you can access the developer tools by going to <strong>Develop > Show Web Inspector</strong>.</p>
+
+            <h2 class="block2">Internal Links in HTML</h2>
+            <p class="inline2">Generally, using relative links for internal linking is preferable as it makes the website more portable and easier to maintain. Absolute links are useful when linking to resources on external websites. Use cases for choosing absolute links include linking to specific external resources that may change their URL frequently. Relative links are beneficial for linking within the same website structure, ensuring that the links remain valid even if the site structure changes.</p>
+
+            <h2 class="block2">Image Formats in Web Development</h2>
+            <p class="inline1">There are several image formats commonly used in web development:</p>
+			<ul>
+                <li class="bg-hex"><strong>JPG (or JPEG):</strong> Suitable for photographs or images with many colors. It uses lossy compression, making file sizes smaller but with some loss of quality.</li>
+                <li class="bg-hex"><strong>GIF:</strong> Ideal for simple graphics with few colors or animations. It supports transparency and animation but has a limited color palette.</li>
+                <li class="bg-gradient"><strong>PNG:</strong> Best for images with sharp edges, text, or transparency. It uses lossless compression, maintaining high quality but resulting in larger file sizes compared to JPG.</li>
+                <li class="bg-gradient"><strong>WEBP:</strong> An image format developed by Google that offers both lossy and lossless compression. It provides smaller file sizes with high quality and supports animation and transparency.</li>
+                <li class="bg-image"><strong>SVG:</strong> Scalable Vector Graphics format that uses XML-based vector images. SVG images are resolution-independent and can be scaled without losing quality. They are suitable for logos, icons, and graphics that need to be displayed at different sizes.</li>
+                <li><img src="fortask.png" alt="none.png" width="1700" height="600"></li>
+		    </ul>
+		    <div class="example1"> </div>
+            <div class="example2"> </div>
+            <div class="example3"> </div>
+            <div class="example4"> </div>
+            <div class="example5"> </div>
+            <div class="example6"> </div>			
+	 </article>
+    </main>
 </body>
 </html>
