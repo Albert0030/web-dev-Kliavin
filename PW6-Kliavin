@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Layout Example</title>
+	<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero img {
+    max-width: 100%;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.news-item img {
+    max-width: 100%;
+}
+
+.news-item h2 {
+    margin-top: 10px;
+}
+
+.news-item p {
+    margin-bottom: 5px;
+}
+
+.read-more {
+    display: block;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+        <div class="logo">Logo(soon)</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="News.png" alt="Hero Image">
+        <h1>Welcome to Our Website</h1>
+        <p>Only the hottest news on your own</p>
+    </section>
+
+    <section class="news">
+        <div class="news-item">
+            <img src="Thumbnail.jpg" alt="News 1 Thumbnail">
+            <h2>Global Warming</h2>
+            <p class="meta">Posted on January 1, 2022</p>
+            <p class="excerpt">New predictions on the heat of Earth</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+		<div class="news-item">
+            <img src="Thumbnail2.jpg" alt="News 1 Thumbnail">
+            <h2>Secrets</h2>
+            <p class="meta">Posted on January 1, 2022</p>
+            <p class="excerpt">What we know for now?</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+		<div class="news-item">
+            <img src="Thumbnail3.jpg" alt="News 1 Thumbnail">
+            <h2>Sports in France</h2>
+            <p class="meta">Posted on January 1, 2022</p>
+            <p class="excerpt">A new place for Olympic Games</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+		<div class="news-item">
+            <img src="News.png" alt="News 1 Thumbnail">
+            <h2>About us</h2>
+            <p class="meta">Posted on January 1, 2022</p>
+            <p class="excerpt">What and who we are</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </section>
+
+</body>
+</html>
