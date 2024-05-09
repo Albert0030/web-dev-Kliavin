@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator Form</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<style>
+  body {
+    font-family: Times New Roman, sans-serif;
+  }
+  .calculator-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  button {
+    margin-right: 10px;
+  }
+    .owl-carousel .item {
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+<form class="calculator-form">
+  <div class="form-group">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" value="0">
+  </div>
+  <div class="form-group">
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" value="0">
+  </div>
+  <div class="form-group">
+    <label for="operator">Operation:</label>
+    <select id="operator">
+      <option value="+">Add (+)</option>
+      <option value="-">Subtract (-)</option>
+      <option value="*">Multiply (*)</option>
+      <option value="/">Divide (/)</option>
+    </select>
+  </div>
+  <button type="button" onclick="performCalculation()">Calculate</button>
+  <button type="reset">Reset</button>
+  <div class="form-group">
+    <label for="result">Result:</label>
+    <output id="result"></output>
+  </div>
+</form>
+<div class="owl-carousel owl-theme">
+  <div class="item"><h3>Explain “repaint” and “reflow” of the webpage.</h3>
+		  
+            <p>"Repaint" and "reflow" are terms used in web development to describe the process of updating and rendering changes on a webpage. 
+			Repaint refers to the process of updating the pixels on the screen when changes occur, while reflow involves recalculating the layout of elements on the page due to changes in size or position.</p></div>
+  <div class="item"><h3> How does JavaScript on the webpage affects the page load speed and performance?</h3>
+		  
+            <p>JavaScript on a webpage can affect the page load speed and performance in several ways. When JavaScript code is executed, it can block other resources from loading, leading to slower page load times. 
+			Additionally, poorly optimized JavaScript code can cause high CPU usage, resulting in slower performance and responsiveness of the webpage.</p></div>
+  <div class="item"><h3>What is “minification” of the script? Why it is useful to minify your scripts?</h3>
+		  
+            <p>Minification of scripts is the process of removing unnecessary characters such as whitespace, comments, and renaming variables to reduce the size of the script file. 
+			Minifying scripts helps to improve page load times by reducing the file size, resulting in faster downloads and execution of the code.</p></div>
+  <div class="item"><h3>What is a JS Web Worker and when do we need it?</h3>
+		  
+            <p>A JS Web Worker is a feature in JavaScript that allows you to run scripts in the background without interfering with the main execution thread of the webpage. 
+			This is useful when you need to perform tasks that are computationally intensive or time-consuming, such as complex calculations or data processing, without blocking the user interface or affecting the responsiveness of the webpage.</p></div>
+ <div class="item"><h4>Sources</h4>
+    <p><a href="https://medium.com/swlh/what-the-heck-is-repaint-and-reflow-in-the-browser-b2d0fb980c08">1</a></p>
+    <p><a href="https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg">2</a></p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Learn/Performance/JavaScript">3</a></p>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 3 },
+      1000: { items: 5 }
+    }
+  });
+});
+</script>
+<script>
+function calculate(num1, operator, num2) {
+  switch(operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    case '/':
+      if(num2 != 0) {
+        return num1 / num2;
+      } else {
+        return "Error: Division by zero is not allowed.";
+      }
+    default:
+      return "Error: Invalid operator.";
+  }
+}
+
+function performCalculation() {
+  var num1 = parseFloat(document.getElementById('num1').value);
+  var operator = document.getElementById('operator').value;
+  var num2 = parseFloat(document.getElementById('num2').value);
+  var result = calculate(num1, operator, num2);
+  document.getElementById('result').value = "The result is: " + result;
+}
+</script>
+</body>
+</html>
